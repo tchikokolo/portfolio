@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Laurys Jadi Tchikokolo - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+        header {
+            background-color: #FFB400; /* Jaune */
+            color: #333; /* Noir */
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2rem;
+        }
+        nav {
+            background-color: #111; /* Noir foncé */
+            color: #FFB400; /* Jaune */
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #FFB400; /* Jaune */
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 30px;
+            margin: 20px;
+            background-color: #444; /* Gris foncé */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none; /* Sections cachées par défaut */
+            text-align: justify;
+        }
+        h2, h3 {
+            color: #FFB400; /* Jaune */
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #111; /* Noir */
+            color: #FFB400; /* Jaune */
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .intro {
+            background-color: #222; /* Gris très foncé */
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        .intro p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        .loisirs {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .loisir-item {
+            text-align: center;
+        }
+        .loisir-item img {
+            width: 50px;
+            height: 50px;
+        }
+        .barre-progression {
+            width: 100%;
+            background-color: #ccc;
+            border-radius: 10px;
+            height: 20px;
+            margin-top: 10px;
+        }
+        .barre-progression div {
+            height: 100%;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        function toggleSection(sectionId) {
+            // Cache toutes les sections
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // Affiche la section sélectionnée
+            var section = document.getElementById(sectionId);
+            if (section) {
+                section.style.display = 'block';
+            }
+        }
+
+        // Affiche automatiquement la section "bienvenue" au début
+        window.onload = function() {
+            toggleSection('bienvenue');
+        };
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Laurys Jadi Tchikokolo</h1>
+    <p>Étudiant en BTS SIO - Futur Ingénieur Réseau</p>
+</header>
+
+<nav>
+    <a href="javascript:void(0);" onclick="toggleSection('bienvenue')">Bienvenue</a>
+    <a href="javascript:void(0);" onclick="toggleSection('competences')">Compétences</a>
+    <a href="javascript:void(0);" onclick="toggleSection('projets')">Projets</a>
+    <a href="javascript:void(0);" onclick="toggleSection('formation')">Formations</a>
+    <a href="javascript:void(0);" onclick="toggleSection('certifications')">Certifications</a>
+    <a href="javascript:void(0);" onclick="toggleSection('cv')">CV</a>
+    <a href="javascript:void(0);" onclick="toggleSection('langues')">Langues</a>
+    <a href="javascript:void(0);" onclick="toggleSection('contact')">Contact</a>
+    <a href="javascript:void(0);" onclick="toggleSection('loisirs')">Loisirs</a>
+</nav>
+
+<section id="bienvenue">
+    <h2>Bienvenue sur mon portfolio</h2>
+    <p>Je suis Laurys Jadi Tchikokolo, étudiant en BTS Services Informatiques aux Organisations (SIO). Ce portfolio présente mes compétences techniques, mes projets réalisés, ma formation, et d'autres informations sur moi. Je me forme dans ces domaines avec l'envie d'apprendre et de progresser. Curieux et motivé, je cherche à participer activement aux projets d'entreprise tout en développant mes propres idées pour améliorer mes compétences. Explorez les différentes sections pour en savoir plus !</p>
+</section>
+
+<section id="competences">
+    <h2>Mes Compétences Techniques</h2>
+    <h3>Réseau et Serveurs</h3>
+    <ul>
+        <li>Installation de Windows Serveur</li>
+        <li>Installation de Windows 10 Pro et 11 Pro</li>
+        <li>Ajouter des rôles Active Directory (AD/DS)</li>
+        <li>Configuration d'Unités Organisationnelles (OU)</li>
+        <li>Gestion des stratégies GPO</li>
+        <li>Services d'impression</li>
+    </ul>
+    
+    <h3>Linux et Systèmes Open Source</h3>
+    <ul>
+        <li>Installation de Debian</li>
+        <li>Commandes Linux de base</li>
+        <li>Installation et gestion de Serveur LAMP</li>
+        <li>Gestion de bases de données MySQL</li>
+        <li>Configuration de GLPI (Gestionnaire de Parc Informatique)</li>
+    </ul>
+    
+    <h3>Mise en réseau et virtualisation</h3>
+    <ul>
+        <li>Configuration et gestion des réseaux locaux</li>
+        <li>Virtualisation des serveurs (VMware, Hyper-V)</li>
+    </ul>
+</section>
+
+<section id="projets">
+    <h2>Projets Réalisés</h2>
+    <h3>Projet 1 : Installation et gestion d'un serveur Windows avec Active Directory</h3>
+    <p>Description du projet, des technologies utilisées et des objectifs atteints.</p>
+
+    <h3>Projet 2 : Serveur LAMP sur Debian pour un site web interne</h3>
+    <p>Description du projet, des technologies utilisées et des objectifs atteints.</p>
+
+    <h3>Projet 3 : Mise en place d’une solution de gestion de parc informatique avec GLPI</h3>
+    <p>Description du projet, des technologies utilisées et des objectifs atteints.</p>
+</section>
+
+<section id="formation">
+    <h2>Formations</h2>
+    <p><strong>BTS SIO</strong> - Spécialité SISR (Solutions d'infrastructure, systèmes et réseaux)</p>
+    <p>Baccalauréat technique F3</p>
+    <p>Brevet d'Etudes du Premier Cycle</p>
+</section>
+
+<section id="certifications">
+    <h2>Mes Certifications</h2>
+    <ul>
+        <li>
+            <p>Télécharger ma certification en format PDF :</p>
+            <a href="certification_cursa.pdf" target="_blank">Télécharger ma certification</a>
+        </li>
+    </ul>
+</section>
+
+<section id="cv">
+    <h2>Mon CV</h2>
+    <ul> 
+    <li>
+     <p>Téléchargez mon CV en format PDF :</p>
+            <a href="cv_laurys.pdf" target="_blank">Télécharger mon CV</a>
+    </li>
+    </ul>
+</section>
+
+<section id="langues">
+    <h2>Langues Parlées</h2>
+    <p><strong>Français</strong> : Langue maternelle</p>
+    <p><strong>Kikongo</strong> : Langue maternelle</p>
+    <p><strong>Anglais</strong> : 20%</p>
+    <div class="barre-progression">
+        <div style="width: 20%; background-color: #FFB400;"></div>
+    </div>
+    <p><strong>Portugais</strong> : 20%</p>
+    <div class="barre-progression">
+        <div style="width: 20%; background-color: #FFB400;"></div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p><strong>Téléphone</strong> : <a href="tel:+33762537803">0762537803</a></p>
+    <p><strong>Email</strong> : <a href="mailto:tchikokololaurysjadi@gmail.com">tchikokololaurysjadi@gmail.com</a></p>
+    <p><strong>Instagram</strong> : <a href="https://www.instagram.com/ljk Laurys salvatore leader Nc" target="_blank">ljk Laurys salvatore leader Nc</a></p>
+    <p><strong>Telegram</strong> : <a href="https://t.me/LaurysJadiTchikokolo" target="_blank">Laurys Jadi Tchikokolo</a></p>
+</section>
+
+<section id="loisirs">
+    <h2>Mes Loisirs</h2>
+    <div class="loisirs">
+        <div class="loisir-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Musical_Notes_icon.svg" alt="Musique">
+            <p>Musique : J'aime écouter de la musique dans différents styles, que ce soit pour me détendre ou pour m'inspirer pendant mes études.</p>
+        </div>
+        <div class="loisir-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Soccer_ball_icon.svg" alt="Sport">
+            <p>Sport : Je fais du sport plusieurs fois par semaine, alternant entre football, course à pied et d'autres activités physiques pour rester en forme.</p>
+        </div>
+        <div class="loisir-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Video_game_controller_icon.svg" alt="Jeux vidéos">
+            <p>Jeux vidéos : J'aime jouer à des jeux vidéo, que ce soit seul ou avec des amis. J'apprécie particulièrement les jeux d'aventure et les jeux d'équipe.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; Laurys Jadi Tchikokolo - Tous droits réservés</p>
+</footer>
+
+</body>
+</html>
